@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
     var counter = 0;
     var removeButton = document.querySelector('#removeFinishedTasksButton');
 
-    
+
     addTaskButton.addEventListener('click', function (event) {
 
         var taskInput = document.querySelector('#taskInput');
@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function(){
         var taskText = document.createElement('p');
         var btnDelete = document.createElement('button');
         var btnComplete = document.createElement('button');
+
+        if (taskInput.value.length > 5 && taskInput.value.length < 100) {
 
         newTask.innerText = 'Task ' + ++counter;
         taskText.innerText = taskInput.value;
@@ -34,6 +36,8 @@ document.addEventListener("DOMContentLoaded", function(){
         newTask.appendChild(btnDelete);
         newTask.appendChild(btnComplete);
         taskList.appendChild(newTask);
+
+        }
 
         taskInput.value = '';
 

@@ -41,3 +41,9 @@ li {
 .done {
     color: red;
 }
+
+#error {
+    padding: 30px;
+    color: red;
+    text-transform: uppercase;
+}
